@@ -24,11 +24,11 @@
       <section>
         <form class="" onsubmit="return Client.handleSubmit(event)">
           <input
-            id="name"
+            id="textInput"
             type="text"
             name="input"
             value=""
-            onblur="onBlur()"
+            onblur=""
             placeholder="Name"
           />
           <input
@@ -39,11 +39,17 @@
             onsubmit="return Client.handleSubmit(event)"
           />
         </form>
+        <span id="dataType"></span>
       </section>
 
       <section>
         <strong>Form Results:</strong>
-        <div id="results"></div>
+        <ul id="results">
+          <li id="agreement"></li>
+          <li id="subjectivity"></li>
+          <li id="confidence"></li>
+          <li id="irony"></li>
+        </ul>
       </section>
     </main>
 
