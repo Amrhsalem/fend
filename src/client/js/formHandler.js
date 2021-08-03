@@ -1,5 +1,4 @@
-import isURL from "validator/es/lib/isURL";
-
+const { isURL } = require("validator");
 function handleSubmit(event) {
   event.preventDefault();
 
@@ -14,7 +13,6 @@ function handleSubmit(event) {
     formText = { "txt": formText };
     document.getElementById("dataType").innerHTML = "Submitted data is Text";
   }
-  console.log("::: Form Submitted :::");
   fetch("http://localhost:8081/test", {
     method: "POST",
     credentials: "omit",
